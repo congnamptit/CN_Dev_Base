@@ -1,7 +1,8 @@
 import 'package:cn_base/router/router.dart';
-import 'package:cn_base/widgets/loading/indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'indicator.dart';
 
 final loadingProvider = Provider(
   (ref) => LoadingProvider(ref.read),
