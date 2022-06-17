@@ -2,6 +2,7 @@ library base_button;
 
 import 'package:cn_base/core/const/constants.dart';
 import 'package:cn_base/theme/theme.dart';
+import 'package:cn_base/widgets/lazy_future_builder.dart';
 import 'package:cn_base/widgets/stless/loading/indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
