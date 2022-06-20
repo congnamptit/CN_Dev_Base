@@ -56,6 +56,7 @@ dependencies:
   adaptive_action_sheet: ^2.0.1
   device_preview: ^1.0.0
   cached_network_image: ^3.2.0
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -84,5 +85,14 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/img/
+    - assets/gif/
+    - assets/icon/
+    - assets/imgBrand/
+    - assets/imgCamera/
+    - assets/imgCategoryMan/
+    - assets/imgllustration/
+    - assets/imgItem/
+    - assets/imgPromo/
     - assets/svgs/
     - assets/fonts/
