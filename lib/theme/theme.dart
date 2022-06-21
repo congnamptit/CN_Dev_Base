@@ -13,11 +13,11 @@ final kLightThemeData = ThemeData(
   primarySwatch: AppColors.cyan,
   // màu chính app
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  primaryColor: AppColors.cyan[100],
+  primaryColor: AppColors.white,
   hintColor: AppColors.grey,
   dividerTheme: const DividerThemeData(space: 1),
   // tùy chỉnh màu sắc, độ dày và thụt lề của Bộ chia, Bộ chia dọc
-  scaffoldBackgroundColor: AppColors.cyan[50],
+  scaffoldBackgroundColor: AppColors.white,
   primaryTextTheme: const TextTheme(
     subtitle1: TextStyle(
       color: AppColors.cyan,
