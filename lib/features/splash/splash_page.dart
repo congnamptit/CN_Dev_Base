@@ -6,6 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../core/const/constants.dart';
 import '../../widgets/lazy_future_builder.dart';
 import '../../widgets/stless/buttons/button.dart';
+import '../../widgets/stless/text/text_view_app.dart';
 
 class SplashPage extends HookConsumerWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -49,17 +50,10 @@ class SplashPage extends HookConsumerWidget {
                       fontSize: 18,
                     ),
                   ),
-                  const Hero(
-                    tag: 'Trev',
-                    child: Text(
-                      'Trev Shop',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 35.0,
-                        letterSpacing: 0.4,
-                        color: Colors.white,
-                      ),
-                    ),
+                  const TextViewApp(
+                    title: 'Shopping App',
+                    fontSize: 35,
+                    letterSpacing: 0.4,
                   ),
                   const SizedBox(height: kDefaultExThinPadding),
                   FutureBuilder(

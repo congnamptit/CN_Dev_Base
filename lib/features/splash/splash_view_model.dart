@@ -1,3 +1,4 @@
+
 import 'package:cn_base/router/router.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -15,10 +16,6 @@ class SplashViewModel extends ViewModel {
 
   final Reader _read;
 
-  // bool _isCheckUser = false;
-  //
-  // SharedPreferences? prefs;
-
   Future<void> onInit() async {
     useEffect(() {
       checkLogin();
@@ -26,27 +23,10 @@ class SplashViewModel extends ViewModel {
     }, []);
   }
 
-  // Future<void> saveNavigatorPage() async {
-  //   SharedPreferences preferences;
-  //   preferences = await SharedPreferences.getInstance();
-  //
-  //   if (preferences.getString('userName') != null) {
-  //     _isCheckUser = false;
-  //     updateState();
-  //   } else {
-  //     _isCheckUser = true;
-  //     updateState();
-  //   }
-  // }
-
   Future<void> checkLogin() async {
     try {
       await Future.delayed(const Duration(seconds: 3), () {
-        // if (_isCheckUser) {
-          router.replace(const ChoseLoginRoute());
-        // } else {
-        //   router.replace(const OnBoardingRoute());
-        // }
+        router.replace(ChooseLoginRoute());
       });
     } catch (e) {
       handleExceptions(e);

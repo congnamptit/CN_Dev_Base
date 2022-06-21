@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cn_base/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../widgets/stless/assets_gen/assets.gen.dart';
 
 class RootPage extends HookConsumerWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -9,9 +12,10 @@ class RootPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AutoTabsScaffold(
       routes: const [
-        // HomeRoute(),
-        // OrderRoute(),
-        // AdminSettingRoute(),
+        HomeRoute(),
+        BrandRoute(),
+        CartRoute(),
+        ProfileRoute(),
       ],
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(
@@ -22,18 +26,23 @@ class RootPage extends HookConsumerWidget {
           items: [
             _NavigationItem(
               label: 'home',
-              // iconSrc: Assets.images.icDietGray.path,
-              // activeIconSrc: Assets.images.icDiet.path,
+              iconSrc: Assets.images.icDietGray.path,
+              activeIconSrc: Assets.images.icDiet.path,
             ),
             _NavigationItem(
-              label: 'order',
-              // iconSrc: Assets.images.icTrolleyGray.path,
-              // activeIconSrc: Assets.images.icTrolley.path,
+              label: 'brand',
+              iconSrc: Assets.images.icDietGray.path,
+              activeIconSrc: Assets.images.icDiet.path,
             ),
             _NavigationItem(
-              label: 'admin',
-              // iconSrc: Assets.images.icInsuranceGray.path,
-              // activeIconSrc: Assets.images.icInsurance.path,
+              label: 'cart',
+              iconSrc: Assets.images.icDietGray.path,
+              activeIconSrc: Assets.images.icDiet.path,
+            ),
+            _NavigationItem(
+              label: 'profile',
+              iconSrc: Assets.images.icDietGray.path,
+              activeIconSrc: Assets.images.icDiet.path,
             ),
           ],
         );
@@ -49,8 +58,7 @@ class _NavigationItem extends BottomNavigationBarItem {
     String? iconSrc,
     Widget? activeIcon,
     String? activeIconSrc,
-  })  : assert((icon != null || iconSrc != null) &&
-            (activeIcon != null || activeIconSrc != null)),
+  })  :
         super(
           label: label,
           icon: icon ??

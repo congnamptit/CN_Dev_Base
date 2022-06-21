@@ -3,6 +3,9 @@ library router;
 import 'package:auto_route/auto_route.dart';
 import 'package:cn_base/features/brand/show/brand_page.dart';
 import 'package:cn_base/features/cart/show/cart_page.dart';
+import 'package:cn_base/features/open_app/login/login.dart';
+import 'package:cn_base/features/open_app/login/login_animation.dart';
+import 'package:cn_base/features/open_app/login/signup.dart';
 import 'package:cn_base/features/profile/show/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -28,13 +31,23 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
     ),
     AutoRoute(
       path: 'chose_login',
-      page: ChoseLoginPage,
-      initial: true,
+      page: ChooseLoginPage,
+    ),
+    AutoRoute(
+      path: 'login',
+      page: LoginPage,
+    ),
+    AutoRoute(
+      path: 'sign_up',
+      page: SignUpPage,
+    ),
+    AutoRoute(
+      path: '/lg_animation',
+      page: LoginAnimationPage,
     ),
     AutoRoute(
       path: 'onboard',
       page: OnBoardingPage,
-      initial: true,
     ),
     AutoRoute(
       path: '/root',
@@ -59,8 +72,8 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
       ],
     ),
     // AutoRoute(
-    //   path: '/product_details',
-    //   page: ProductDetailsPage,
+    //   path: '/lg_animation',
+    //   page: LoginAnimation,
     // ),
     // AutoRoute(
     //   path: '/order_detail',
