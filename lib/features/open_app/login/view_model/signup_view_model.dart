@@ -22,7 +22,7 @@ class SignUpViewModel extends ViewModel {
   Future<void> checkLogin() async {
     try {
       await Future.delayed(const Duration(seconds: 3), () {
-        router.replace(ChoseLoginRoute());
+        router.replace(ChooseLoginRoute());
       });
     } catch (e) {
       handleExceptions(e);

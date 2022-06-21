@@ -51,7 +51,7 @@ class SignUpPage extends HookConsumerWidget {
           Container(
             decoration: const BoxDecoration(
                 image: DecorationImage(
-              image: AssetImage('assets/img/backgroundgirl.png'),
+              image: AssetImage('assets/img/background_girl.png'),
               fit: BoxFit.cover,
             )),
             child: Container(
@@ -126,7 +126,7 @@ class SignUpPage extends HookConsumerWidget {
                                   ),
                                   TextButton(
                                     onPressed: () {
-                                      router.replace(const LoginRoute());
+                                      router.replace(LoginRoute());
                                     },
                                     child: const TextViewApp(
                                       title: 'Have Account? Sign In',

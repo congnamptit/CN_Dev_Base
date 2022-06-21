@@ -52,7 +52,7 @@ class LoginPage extends HookConsumerWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/img/loginscreenbackground.png'),
+            image: AssetImage('assets/img/login_screen_background.png'),
           ),
         ),
         child: Container(
@@ -146,7 +146,7 @@ class LoginPage extends HookConsumerWidget {
                       const SizedBox(height: 15),
                       TextButton(
                         onPressed: () {
-                          router.replace(const SignUpRoute());
+                          router.replace(SignUpRoute());
                         },
                         child: const TextViewApp(
                           title: 'Have Account? Sign In',

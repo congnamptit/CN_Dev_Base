@@ -16,7 +16,7 @@ class FormPage extends StatelessWidget {
         /// Set Background image in layout (Click to open code)
         decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assets/img/loginscreenbackground.png"),
+          image: AssetImage("assets/img/login_screen_background.png"),
           fit: BoxFit.cover,
         )),
         child: Container(

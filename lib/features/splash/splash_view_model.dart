@@ -1,3 +1,4 @@
+
 import 'package:cn_base/router/router.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -25,7 +26,7 @@ class SplashViewModel extends ViewModel {
   Future<void> checkLogin() async {
     try {
       await Future.delayed(const Duration(seconds: 3), () {
-        router.replace(ChoseLoginRoute());
+        router.replace(ChooseLoginRoute());
       });
     } catch (e) {
       handleExceptions(e);
