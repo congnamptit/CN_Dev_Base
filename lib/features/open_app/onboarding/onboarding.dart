@@ -1,6 +1,6 @@
 import 'package:cn_base/core/utils/utils.dart';
 import 'package:cn_base/theme/theme.dart';
-import 'package:cn_base/widgets/text_view.dart';
+import 'package:cn_base/widgets/stless/text/text_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shimmer/shimmer.dart';
