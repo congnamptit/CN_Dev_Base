@@ -5,12 +5,14 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../../core/view_model/view_model.dart';
 
 final signUpVMProvider = Provider.autoDispose<SignUpViewModel>(
-      (ref) => SignUpViewModel(ref.read),
+  (ref) => SignUpViewModel(ref.read),
 );
 
 class SignUpViewModel extends ViewModel {
-  SignUpViewModel(Reader read): super(read);
+  SignUpViewModel(Reader read) : super(read);
 
+  late bool tap = false;
+  late bool tapSignup = false;
 
   Future<void> playAnimation(AnimationController animationController) async {
     try {
