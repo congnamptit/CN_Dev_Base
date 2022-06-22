@@ -1,4 +1,5 @@
 import 'package:cn_base/features/home/stfuls/category_icon_item.dart';
+import 'package:cn_base/features/home/stfuls/flash_sale.dart';
 import 'package:cn_base/features/home/stfuls/image_slider.dart';
 import 'package:cn_base/features/home/stfuls/promotion_list.dart';
 import 'package:cn_base/widgets/stless/app_bar/app_bar_custom.dart';
@@ -24,6 +25,8 @@ class HomePage extends HookConsumerWidget {
                 const ImageSlider(),
                 const CategoryIconItem(),
                 const Promotion(),
+                const SizedBox(height: 30,),
+                const FlashSale(),
               ],
             ),
           ),
