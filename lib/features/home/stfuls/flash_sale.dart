@@ -1,4 +1,4 @@
-import 'package:cn_base/features/home/stfuls/splash_sale_item.dart';
+import 'package:cn_base/features/home/stless/splash_sale_item.dart';
 import 'package:cn_base/widgets/stless/assets_gen/assets.gen.dart';
 import 'package:cn_base/widgets/stless/text/text_view_app.dart';
 import 'package:flutter/material.dart';

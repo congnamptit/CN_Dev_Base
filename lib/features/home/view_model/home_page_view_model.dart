@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../core/view_model/view_model.dart';
-import '../stfuls/category_icon_item.dart';
+import '../stless/category_icon_item.dart';
 
 final homeVMProvider = ChangeNotifierProvider<HomeViewModel>(
   (ref) => HomeViewModel(ref.read),
