@@ -1,5 +1,6 @@
 import 'package:cn_base/features/home/stfuls/category_icon_item.dart';
 import 'package:cn_base/features/home/stfuls/image_slider.dart';
+import 'package:cn_base/features/home/stfuls/promotion_list.dart';
 import 'package:cn_base/widgets/stless/app_bar/app_bar_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -22,6 +23,7 @@ class HomePage extends HookConsumerWidget {
                 SizedBox(height: 58 + statusBarHeight,),
                 const ImageSlider(),
                 const CategoryIconItem(),
+                const Promotion(),
               ],
             ),
           ),

@@ -21,37 +21,38 @@ class CategoryIconItem extends HookConsumerWidget {
               title: 'menu',
               fontSize: 14,
               fontWeight: FontWeight.w700,
+              color: AppColors.black,
             ),
           ),
           const SizedBox(
             height: 20,
           ),
           GridView.builder(
+            padding: const EdgeInsets.all(0),
             shrinkWrap: true,
-            semanticChildCount: 4,
             itemCount: data.listIcon.length,
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 100,
-              childAspectRatio: 3 / 2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              crossAxisSpacing: 0,
+              mainAxisSpacing: 0,
+              mainAxisExtent: 65,
             ),
             itemBuilder: (context, index) {
-              return GestureDetector(
+              return InkWell(
                 onTap: () {},
                 child: Column(
                   children: [
-                    Expanded(child: Image.asset(data.listIcon[index].icon)),
+                    Image.asset(data.listIcon[index].icon,
+                    height: 30,
+                    ),
                     const SizedBox(
                       height: 4,
                     ),
-                    Expanded(
-                      child: TextViewApp(
-                        title: data.listIcon[index].title,
-                        color: AppColors.black,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 10,
-                      ),
+                    TextViewApp(
+                      title: data.listIcon[index].title,
+                      color: AppColors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
                     ),
                   ],
                 ),
