@@ -1,3 +1,4 @@
+import 'package:cn_base/features/home/stfuls/category_icon_item.dart';
 import 'package:cn_base/features/home/stfuls/image_slider.dart';
 import 'package:cn_base/widgets/stless/app_bar/app_bar_custom.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,12 @@ class HomePage extends HookConsumerWidget {
       body: Stack(
         children: [
           SingleChildScrollView(
+            scrollDirection: Axis.vertical,
             child: Column(
               children: [
                 SizedBox(height: 58 + statusBarHeight,),
                 const ImageSlider(),
+                const CategoryIconItem(),
               ],
             ),
           ),
