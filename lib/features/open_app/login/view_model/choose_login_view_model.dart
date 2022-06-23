@@ -11,6 +11,8 @@ final chooseLoginVMProvider = Provider.autoDispose<ChoseLoginVM>(
 class ChoseLoginVM extends ViewModel {
   ChoseLoginVM(Reader read): super(read);
 
+  late bool tapLogin = false;
+  late bool tapSignup = false;
 
   Future<void> playAnimation(AnimationController animationController) async {
     try {

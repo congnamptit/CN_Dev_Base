@@ -9,18 +9,14 @@ import '../../../widgets/stless/buttons/button_login.dart';
 import '../../../widgets/stless/text/text_view_app.dart';
 import 'view_model/choose_login_view_model.dart';
 
-@immutable
 class ChooseLoginPage extends HookConsumerWidget {
-  ChooseLoginPage({Key? key}) : super(key: key);
-
-  var tapLogin = 0;
-  var tapSignup = 0;
-  late Animation animation;
+  const ChooseLoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     final vm = ref.read(chooseLoginVMProvider);
+    final vmTap = ref.watch(chooseLoginVMProvider);
     final setState = ref.read(chooseLoginVMProvider).updateState();
 
     var animationCtr = useAnimationController(
@@ -33,8 +29,8 @@ class ChooseLoginPage extends HookConsumerWidget {
         animationCtr.addStatusListener(
           (status) {
             if (status == AnimationStatus.dismissed) {
-              tapLogin = 0;
-              tapSignup = 0;
+              vmTap.tapSignup = false;
+              vmTap.tapLogin = false;
               setState;
             }
           },
@@ -135,13 +131,13 @@ class ChooseLoginPage extends HookConsumerWidget {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             /// To create animation if user tap == animation play (Click to open code)
-                            tapLogin == 0
+                            vmTap.tapLogin == false
                                 ? Material(
                                     color: Colors.transparent,
                                     child: InkWell(
                                       splashColor: Colors.white,
                                       onTap: () {
-                                        tapLogin = 1;
+                                        vmTap.tapLogin = true;
                                         setState;
                                         vm.playAnimation(animationCtr);
                                       },
@@ -196,13 +192,13 @@ class ChooseLoginPage extends HookConsumerWidget {
                             const Padding(padding: EdgeInsets.only(top: 70.0)),
                           ],
                         ),
-                        tapSignup == 0
+                        vmTap.tapSignup == false
                             ? Material(
                                 color: Colors.transparent,
                                 child: InkWell(
                                   splashColor: Colors.white,
                                   onTap: () {
-                                    tapSignup = 1;
+                                    vmTap.tapSignup = true;
                                     setState;
                                     vm.playAnimation(animationCtr);
                                   },

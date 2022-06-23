@@ -12,11 +12,9 @@ import '../../../widgets/stless/buttons/button_custom.dart';
 import '../../../widgets/stless/form/text_form_app.dart';
 
 class LoginPage extends HookConsumerWidget {
-  LoginPage({
+  const LoginPage({
     Key? key,
   }) : super(key: key);
-
-  late bool tap = false;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,6 +22,7 @@ class LoginPage extends HookConsumerWidget {
 
     final router = ref.read(routerProvider);
     final vm = ref.read(loginVMProvider);
+    var vmTap = ref.watch(loginVMProvider);
     final setState = ref.read(loginVMProvider).updateState();
 
     var animationCtr = useAnimationController(
@@ -36,7 +35,7 @@ class LoginPage extends HookConsumerWidget {
         animationCtr.addStatusListener(
           (status) {
             if (status == AnimationStatus.dismissed) {
-              tap = false;
+              vmTap.tap = false;
               setState;
             }
           },
@@ -162,11 +161,11 @@ class LoginPage extends HookConsumerWidget {
                       )
                     ],
                   ),
-                  tap == false
+                  vmTap.tap == false
                       ? InkWell(
                           splashColor: Colors.yellow,
                           onTap: () {
-                            tap = true;
+                            vmTap.tap = true;
                             setState;
                             AnimationApp(
                               animationController: animationCtr,

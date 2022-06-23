@@ -3,8 +3,6 @@ import 'package:cn_base/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../widgets/stless/assets_gen/assets.gen.dart';
-
 class RootPage extends HookConsumerWidget {
   const RootPage({Key? key}) : super(key: key);
 
@@ -26,23 +24,47 @@ class RootPage extends HookConsumerWidget {
           items: [
             _NavigationItem(
               label: 'home',
-              iconSrc: Assets.images.icDietGray.path,
-              activeIconSrc: Assets.images.icDiet.path,
+              icon: const Icon(
+                Icons.home,
+                color: Colors.black38,
+              ),
+              activeIcon: const Icon(
+                Icons.home,
+                color: Color(0xFF6991C7),
+              ),
             ),
             _NavigationItem(
               label: 'brand',
-              iconSrc: Assets.images.icDietGray.path,
-              activeIconSrc: Assets.images.icDiet.path,
+              icon: const Icon(
+                Icons.shop,
+                color: Colors.black38,
+              ),
+              activeIcon: const Icon(
+                Icons.shop,
+                color: Color(0xFF6991C7),
+              ),
             ),
             _NavigationItem(
               label: 'cart',
-              iconSrc: Assets.images.icDietGray.path,
-              activeIconSrc: Assets.images.icDiet.path,
+              icon: const Icon(
+                Icons.shopping_cart,
+                color: Colors.black38,
+              ),
+              activeIcon: const Icon(
+                Icons.shopping_cart,
+                color: Color(0xFF6991C7),
+              ),
             ),
             _NavigationItem(
+              icon: const Icon(
+                Icons.person,
+                color: Colors.black38,
+              ),
+              activeIcon: const Icon(
+                Icons.person,
+                color: Color(0xFF6991C7),
+              ),
               label: 'profile',
-              iconSrc: Assets.images.icDietGray.path,
-              activeIconSrc: Assets.images.icDiet.path,
             ),
           ],
         );
@@ -58,8 +80,7 @@ class _NavigationItem extends BottomNavigationBarItem {
     String? iconSrc,
     Widget? activeIcon,
     String? activeIconSrc,
-  })  :
-        super(
+  }) : super(
           label: label,
           icon: icon ??
               Image.asset(
