@@ -504,19 +504,28 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
           ),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap: () {},
-              child: Align(
-                alignment: Alignment.center,
-                child: TextViewApp(
-                  title: title,
-                  color: Colors.black54,
-                  fontWeight: FontWeight.w700,
-                  fontSize: (expandedHeight / 40) - (shrinkOffset / 40) + 18,
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: const Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 20, left: 20),
+                  child: Icon(Icons.arrow_back),
                 ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: TextViewApp(
+                title: title,
+                color: Colors.black54,
+                fontWeight: FontWeight.w700,
+                fontSize: (expandedHeight / 40) - (shrinkOffset / 40) + 18,
               ),
             ),
             const SizedBox(
