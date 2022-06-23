@@ -9,11 +9,11 @@ class RootPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return AutoTabsScaffold(
-      routes: const [
-        HomeRoute(),
+      routes: [
+        const HomeRoute(),
         BrandRoute(),
-        CartRoute(),
-        ProfileRoute(),
+        const CartRoute(),
+        const ProfileRoute(),
       ],
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(

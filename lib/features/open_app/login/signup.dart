@@ -123,7 +123,7 @@ class SignUpPage extends HookConsumerWidget {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    router.replace(LoginRoute());
+                                    router.replace(const LoginRoute());
                                   },
                                   child: const TextViewApp(
                                     title: 'Have Account? Sign In',

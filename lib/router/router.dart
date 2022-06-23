@@ -1,6 +1,7 @@
 library router;
 
 import 'package:auto_route/auto_route.dart';
+import 'package:cn_base/features/brand/show/brand_detail.dart';
 import 'package:cn_base/features/brand/show/brand_page.dart';
 import 'package:cn_base/features/cart/show/cart_page.dart';
 import 'package:cn_base/features/open_app/login/login.dart';
@@ -10,6 +11,7 @@ import 'package:cn_base/features/profile/show/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../features/model/brand_model.dart';
 import '../features/home/show/home_page.dart';
 import '../features/open_app/login/chose_login_or_signup.dart';
 import '../features/open_app/onboarding/onboarding.dart';
@@ -71,10 +73,10 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
         ),
       ],
     ),
-    // AutoRoute(
-    //   path: '/lg_animation',
-    //   page: LoginAnimation,
-    // ),
+    AutoRoute(
+      path: '/brand_detail',
+      page: BrandDetailPage,
+    ),
     // AutoRoute(
     //   path: '/order_detail',
     //   page: OrderDetailPage,
