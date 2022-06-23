@@ -120,7 +120,7 @@ class BrandDetailPage extends ConsumerWidget {
                           ],
                         ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Expanded(
                               child: InkWell(
@@ -133,11 +133,12 @@ class BrandDetailPage extends ConsumerWidget {
                                   );
                                 },
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Expanded(
+                                    const Flexible(
                                         child: Icon(Icons.arrow_drop_down)),
                                     // const SizedBox(height: 10),
-                                    Expanded(
+                                    Flexible(
                                       child: Text(
                                         'Sort',
                                         style: StyleText
@@ -170,14 +171,16 @@ class BrandDetailPage extends ConsumerWidget {
                                 },
                                 child: Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                      MainAxisAlignment.center,
                                   children: [
-                                    const Icon(Icons.arrow_drop_down),
+                                    const Flexible(child: Icon(Icons.arrow_drop_down)),
                                     const SizedBox(height: 10),
-                                    Text(
-                                      'Notification',
-                                      style:
-                                          StyleText.fontCustomSheetBottomHeader,
+                                    Flexible(
+                                      child: Text(
+                                        'Notification',
+                                        style:
+                                            StyleText.fontCustomSheetBottomHeader,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -197,7 +200,7 @@ class BrandDetailPage extends ConsumerWidget {
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
                   return Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Container(
                       decoration: BoxDecoration(
                         color: AppColors.white,
