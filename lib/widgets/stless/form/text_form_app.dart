@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFromApp extends StatelessWidget {
-  TextFromApp({
+  const TextFromApp({
     Key? key,
     this.email,
     this.icon,
@@ -9,10 +9,10 @@ class TextFromApp extends StatelessWidget {
     this.password,
   }) : super(key: key);
 
-  bool? password;
-  String? email;
-  IconData? icon;
-  TextInputType? inputType;
+  final bool? password;
+  final String? email;
+  final IconData? icon;
+  final TextInputType? inputType;
 
   @override
   Widget build(BuildContext context) {

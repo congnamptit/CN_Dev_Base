@@ -1,4 +1,4 @@
-import 'package:cn_base/features/home/stless/recommend_item.dart';
+import 'package:cn_base/features/model/recommend_item.dart';
 import 'package:cn_base/theme/theme.dart';
 import 'package:cn_base/widgets/stless/text/text_view_app.dart';
 import 'package:flutter/material.dart';
@@ -61,9 +61,10 @@ class Recommend extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Hero(
-                            tag: "girl-${item.id}",
-                            child: Material(
+                          // Hero(
+                          //   tag: "girl-${item.id}",
+                          //   child:
+                            Material(
                               child: InkWell(
                                 child: Container(
                                   height: mediaQuery.size.height / 3.3,
@@ -80,7 +81,7 @@ class Recommend extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                            ),
+                            // ),
                           ),
                           const SizedBox(height: 6),
                           Container(

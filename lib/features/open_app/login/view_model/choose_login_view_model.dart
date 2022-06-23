@@ -25,7 +25,7 @@ class ChoseLoginVM extends ViewModel {
     try {
       await Future.delayed(const Duration(seconds: 3), () {
         // if (_isCheckUser) {
-        router.replace(ChooseLoginRoute());
+        router.replace(const ChooseLoginRoute());
         // } else {
         //   router.replace(const OnBoardingRoute());
         // }

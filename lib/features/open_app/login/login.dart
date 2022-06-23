@@ -145,7 +145,7 @@ class LoginPage extends HookConsumerWidget {
                       const SizedBox(height: 15),
                       TextButton(
                         onPressed: () {
-                          router.replace(SignUpRoute());
+                          router.replace(const SignUpRoute());
                         },
                         child: const TextViewApp(
                           title: 'Have Account? Sign In',
