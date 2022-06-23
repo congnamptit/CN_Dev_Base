@@ -7,6 +7,8 @@ part 'colors.dart';
 
 part 'font_size.dart';
 
+part 'style_text.dart';
+
 final kLightThemeData = ThemeData(
   brightness: Brightness.light,
   // Độ sáng app

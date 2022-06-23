@@ -255,7 +255,6 @@ class CarouselState extends State<Carousel> {
             );
           },
         ),
-
         widget.showIndicator!
             ? Positioned(
                 bottom: widget.moveIndicatorFromBottom,

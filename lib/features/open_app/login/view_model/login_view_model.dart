@@ -5,12 +5,13 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../../core/view_model/view_model.dart';
 
 final loginVMProvider = Provider.autoDispose<LoginViewModel>(
-      (ref) => LoginViewModel(ref.read),
+  (ref) => LoginViewModel(ref.read),
 );
 
 class LoginViewModel extends ViewModel {
-  LoginViewModel(Reader read): super(read);
+  LoginViewModel(Reader read) : super(read);
 
+  late bool tap = false;
 
   Future<void> playAnimation(AnimationController animationController) async {
     try {
