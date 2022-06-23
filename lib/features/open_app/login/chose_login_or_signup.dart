@@ -147,7 +147,7 @@ class ChooseLoginPage extends HookConsumerWidget {
                                 : AnimationApp(
                                     animationController: animationCtr,
                                     onCompleted: () {
-                                      vm.router.replace(SignUpRoute());
+                                      vm.router.replace(const SignUpRoute());
                                     },
                                   ),
                             const Padding(padding: EdgeInsets.only(top: 15.0)),
@@ -208,7 +208,7 @@ class ChooseLoginPage extends HookConsumerWidget {
                             : AnimationApp(
                                 animationController: animationCtr,
                                 onCompleted: () {
-                                  vm.router.replace(LoginRoute());
+                                  vm.router.replace(const LoginRoute());
                                 },
                               ),
                       ],
