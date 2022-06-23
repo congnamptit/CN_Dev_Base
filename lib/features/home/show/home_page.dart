@@ -20,7 +20,6 @@ class HomePage extends HookConsumerWidget {
       body: Stack(
         children: [
           SingleChildScrollView(
-            scrollDirection: Axis.vertical,
             child: Column(
               children: [
                 SizedBox(height: 58 + statusBarHeight,),
