@@ -164,6 +164,7 @@ class SignUpPage extends HookConsumerWidget {
                               ),
                             )
                           : AnimationApp(
+                              color: const Color(0xFF3B2E6F),
                               animationController: animationCtr,
                               onCompleted: () {
                                 vm.router.replace(const RootRoute());

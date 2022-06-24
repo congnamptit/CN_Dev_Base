@@ -168,6 +168,7 @@ class LoginPage extends HookConsumerWidget {
                             vmTap.tap = true;
                             setState;
                             AnimationApp(
+                              color: const Color(0xFF3B2E6F),
                               animationController: animationCtr,
                               onCompleted: () {
                                 vm.router.replace(const RootRoute());
@@ -188,6 +189,7 @@ class LoginPage extends HookConsumerWidget {
                           ),
                         )
                       : AnimationApp(
+                    color: const Color(0xFF3B2E6F),
                           animationController: animationCtr,
                           onCompleted: () {
                             vm.router.replace(const RootRoute());

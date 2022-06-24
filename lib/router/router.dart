@@ -11,8 +11,9 @@ import 'package:cn_base/features/profile/show/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../features/model/brand_model.dart';
 import '../features/home/show/home_page.dart';
+import '../features/home/show/search_page.dart';
+import '../features/model/brand_model.dart';
 import '../features/open_app/login/chose_login_or_signup.dart';
 import '../features/open_app/onboarding/onboarding.dart';
 import '../features/root/root_page.dart';
@@ -77,14 +78,10 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
       path: '/brand_detail',
       page: BrandDetailPage,
     ),
-    // AutoRoute(
-    //   path: '/message',
-    //   page: PrivateMessage,
-    // ),
-    // AutoRoute(
-    //   path: '/order_detail',
-    //   page: OrderDetailPage,
-    // ),
+    AutoRoute(
+      path: '/search',
+      page: SearchPage,
+    ),
     // AutoRoute(
     //   path: '/admin_add_product',
     //   page: AdminAddProductPage,

@@ -11,6 +11,7 @@ class AnimationApp extends HookWidget {
     Key? key,
     required this.animationController,
     required this.onCompleted,
+    required this.color,
     this.builder,
   })  : animation = Tween(
           end: 900.0,
@@ -27,6 +28,7 @@ class AnimationApp extends HookWidget {
   final Animation animation;
   final VoidCallback onCompleted;
   final AnimationAppBuilder? builder;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class AnimationApp extends HookWidget {
             height: animation.value,
             width: animation.value,
             decoration: BoxDecoration(
-              color: const Color(0xFF3B2E6F),
+              color: color,
               shape:
                   animation.value < 600 ? BoxShape.circle : BoxShape.rectangle,
             ),
