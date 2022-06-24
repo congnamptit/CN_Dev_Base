@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:cn_base/features/home/show/search_page.dart';
 import 'package:cn_base/router/router.dart';
 import 'package:cn_base/widgets/stless/text/text_view_app.dart';
@@ -42,30 +41,30 @@ class AppBarCustom extends HookConsumerWidget {
         children: [
           InkWell(
             onTap: () {
-              // router.push(const RootRoute(),
-              // Navigator.of(context).push(
-              //   PageRouteBuilder(
-              //     pageBuilder: (_, __, ___) => const SearchPage(),
-              //     transitionDuration: const Duration(milliseconds: 750),
-              //     transitionsBuilder:
-              //         (_, Animation<double> animation, __, Widget child) {
-              //       return Opacity(
-              //         opacity: animation.value,
-              //         child: child,
-              //       );
-              //     },
-              //   ),
-              // );
-              CustomRoute(
-                page: SearchPage,
-                durationInMilliseconds: 750,
-                transitionsBuilder:
-                    (_, Animation<double> animation, __, Widget child) {
-                  return Opacity(
-                    opacity: animation.value,
-                    child: child,
-                  );
-                },
+                  // CustomRoute(
+                  //   page: SearchPage,
+                  //   durationInMilliseconds: 750,
+                  //   transitionsBuilder:
+                  //       (_, Animation<double> animation, __, Widget child) {
+                  //     return Opacity(
+                  //       opacity: animation.value,
+                  //       child: child,
+                  //     );
+                  //   },
+                  // );
+
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  pageBuilder: (_, __, ___) => const SearchPage(),
+                  transitionDuration: const Duration(milliseconds: 750),
+                  transitionsBuilder:
+                      (_, Animation<double> animation, __, Widget child) {
+                    return Opacity(
+                      opacity: animation.value,
+                      child: child,
+                    );
+                  },
+                ),
               );
             },
             child: Container(
