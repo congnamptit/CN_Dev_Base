@@ -43,7 +43,7 @@ class AnimationApp extends HookWidget {
             height: animation.value,
             width: animation.value,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: const Color(0xFF3B2E6F),
               shape:
                   animation.value < 600 ? BoxShape.circle : BoxShape.rectangle,
             ),

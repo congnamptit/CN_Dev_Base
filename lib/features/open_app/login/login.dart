@@ -127,7 +127,7 @@ class LoginPage extends HookConsumerWidget {
                       ),
 
                       /// TextFromField Email
-                      TextFromApp(
+                      const TextFromApp(
                         icon: Icons.email,
                         password: false,
                         email: 'Email',
@@ -136,7 +136,7 @@ class LoginPage extends HookConsumerWidget {
                       const SizedBox(height: 10),
 
                       /// TextFromField Password
-                      TextFromApp(
+                      const TextFromApp(
                         icon: Icons.vpn_key,
                         password: true,
                         email: 'Password',
