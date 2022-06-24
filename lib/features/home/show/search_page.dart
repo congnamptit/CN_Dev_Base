@@ -5,7 +5,7 @@ import '../../../theme/theme.dart';
 import '../../../widgets/stless/text/text_view_app.dart';
 
 class SearchPage extends HookConsumerWidget {
-  const SearchPage({Key? key}) : super(key: key);
+  SearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,21 +18,46 @@ class SearchPage extends HookConsumerWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            TextViewApp(
+          children:  [
+            const TextViewApp(
               title: 'Hello, i am App. What would you like to search ?',
               letterSpacing: 0.1,
               fontWeight: FontWeight.w600,
               fontSize: 26,
               color: Colors.black54,
             ),
-            SizedBox(height: 35),
-            SearchAppBar(),
+            const SizedBox(height: 35),
+            const SearchAppBar(),
+            _favorite,
           ],
         ),
       ),
     );
   }
+
+  final _favorite = Padding(padding: const EdgeInsets.only(top: 20),
+    child: SizedBox(
+      height: 250,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Padding(padding: EdgeInsets.symmetric(horizontal: 20),
+            child: TextViewApp(title: 'Favorite',
+            color: Colors.black26,
+            ),
+          ),
+          Expanded(child: ListView(
+            padding: const EdgeInsets.only(top: 20, bottom: 2),
+            scrollDirection: Axis.horizontal,
+            children: const [
+              SizedBox(width: 20),
+
+            ],
+          ),),
+        ],
+      ),
+    ),
+  );
 }
 
 class SearchAppBar extends StatelessWidget {
