@@ -78,6 +78,10 @@ final routerProvider = Provider<AppRouter>((_) => AppRouter());
       page: BrandDetailPage,
     ),
     // AutoRoute(
+    //   path: '/message',
+    //   page: PrivateMessage,
+    // ),
+    // AutoRoute(
     //   path: '/order_detail',
     //   page: OrderDetailPage,
     // ),

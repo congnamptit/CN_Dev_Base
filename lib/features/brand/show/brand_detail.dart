@@ -1,3 +1,4 @@
+import 'package:cn_base/features/brand/message.dart';
 import 'package:cn_base/router/router.dart';
 import 'package:cn_base/theme/theme.dart';
 import 'package:cn_base/widgets/stless/text/text_view_app.dart';
@@ -70,7 +71,14 @@ class BrandDetailPage extends ConsumerWidget {
                               ButtonCustom(
                                 txt: 'Message',
                                 color: Colors.blue,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    PageRouteBuilder(
+                                      pageBuilder: (_, __, ___) =>
+                                          PrivateMessage(brand),
+                                    ),
+                                  );
+                                },
                               ),
                               const SizedBox(height: 10),
                               ButtonCustom(
@@ -170,16 +178,16 @@ class BrandDetailPage extends ConsumerWidget {
                                       });
                                 },
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Flexible(child: Icon(Icons.arrow_drop_down)),
+                                    const Flexible(
+                                        child: Icon(Icons.arrow_drop_down)),
                                     const SizedBox(height: 10),
                                     Flexible(
                                       child: Text(
                                         'Notification',
-                                        style:
-                                            StyleText.fontCustomSheetBottomHeader,
+                                        style: StyleText
+                                            .fontCustomSheetBottomHeader,
                                       ),
                                     ),
                                   ],
